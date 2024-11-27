@@ -18,3 +18,9 @@ Nbig-market-code/big-market-code-app/src/main/java/org/example/Application.java
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 k
 ;big-market-code/docs/dev-ops/docker-compose-environment.yml,7/2/72c65c295919eba8ae14a8635dd5382361229c88
+‘
+abig-market-code/big-market-code-types/src/main/java/org/example/types/exception/AppException.java,3/9/3983cd12b9d8afafdd43b6dc8033e4143b6bb653
+e
+5big-market-code/docs/dev-ops/mysql/sql/big_market.sql,8/6/868aaa0ee574cfbfd50e6a675bfbe2df01ff7131
+c
+3big-market-code/docs/dev-ops/docker-compose-app.yml,3/6/363a104f40503454eb5c141b1976472c8191ee0a
