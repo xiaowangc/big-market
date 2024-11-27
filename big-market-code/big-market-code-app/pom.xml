@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.example</groupId>
+        <groupId>com.chige</groupId>
         <artifactId>big-market-code</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -12,6 +12,18 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.nacos</groupId>
+            <artifactId>nacos-client</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -81,11 +93,11 @@
 
         <!-- 工程模块；启动依赖 trigger->domain, infrastructure-->
         <dependency>
-            <groupId>org.example</groupId>
+            <groupId>com.chige</groupId>
             <artifactId>big-market-code-trigger</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.example</groupId>
+            <groupId>com.chige</groupId>
             <artifactId>big-market-code-infrastructure</artifactId>
         </dependency>
     </dependencies>
@@ -127,7 +139,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>org.example.Application</mainClass>
+                    <mainClass>com.chige.Application</mainClass>
                     <layout>JAR</layout>
                 </configuration>
             </plugin>

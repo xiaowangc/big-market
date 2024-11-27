@@ -40,3 +40,16 @@ logging:
   level:
     root: info
   config: classpath:logback-spring.xml
+
+dubbo:
+  application:
+    name: big-market
+    version: 1.0
+  registry:
+    id: nacos-registry
+    address: nacos://10.1.94.92:8848
+  protocol:
+    name: dubbo
+    port: -1
+  scan:
+    base-packages: com.chige.trigger.api
