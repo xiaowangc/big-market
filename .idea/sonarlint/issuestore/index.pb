@@ -86,3 +86,9 @@ m
 =big-market-test-rpc/src/test/java/com/chige/test/ApiTest.java,b/6/b6723c094587f1f8c547e37198c22bf4f64a9694
 f
 6big-market-code/big-market-code-infrastructure/pom.xml,0/b/0bf832ef268cc4ea2acd95d9e81108549539c775
+`
+0big-market-code/docs/dev-ops/mysql/sql/nacos.sql,a/5/a5c5755a07b9b2929d250066e5fbb488b701a8ea
+ƒ
+Sbig-market-code/big-market-code-app/src/main/java/com/chige/config/GuavaConfig.java,7/0/70ef8fe421bada52ae381ee4500db61493dbb146
+‰
+Ybig-market-code/big-market-code-app/src/main/java/com/chige/config/BigMarketDBConfig.java,4/9/49c82d9c01cd3ec1cc75b68dfc47222838338e4b

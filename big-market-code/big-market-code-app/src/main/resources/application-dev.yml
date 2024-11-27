@@ -47,7 +47,7 @@ dubbo:
     version: 1.0
   registry:
     id: nacos-registry
-    address: nacos://10.1.94.92:8848
+    address: nacos://192.168.1.111:8848
   protocol:
     name: dubbo
     port: -1
