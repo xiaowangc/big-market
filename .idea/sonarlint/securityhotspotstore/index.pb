@@ -74,3 +74,15 @@ Mbig-market-code/big-market-code-app/src/test/java/com/chige/test/ApiTest.java,
 abig-market-code/big-market-code-app/src/test/java/com/chige/test/infrastructure/AwardDaoTest.java,b/e/be50ea0c721ed0b65558bacc3fe799e335a1689c
 |
 Lbig-market-code/big-market-code-app/src/main/java/com/chige/Application.java,7/b/7bbe8af35479c54720742818af4502c99dfc5f67
+_
+/big-market-code/big-market-code-trigger/pom.xml,0/b/0bf15ba61e20139ca2a7e18222828d5b7b52cec2
+†
+Vbig-market-code/big-market-code-api/src/main/java/com/chige/api/response/Response.java,6/6/6650b79f3c3eaa099bcdee9aeb785dd018048524
+“
+cbig-market-code/big-market-code-api/src/main/java/com/chige/trigger/api/IRaffleActivityService.java,3/c/3c64bd8198d2bb2db8073f33db91f34e3ba6b7c9
+š
+jbig-market-code/big-market-code-trigger/src/main/java/com/chige/trigger/http/RaffleActivityController.java,d/d/ddfa42fa2eb374b2eb24145a4bc1f49598db358e
+m
+=big-market-test-rpc/src/test/java/com/chige/test/ApiTest.java,b/6/b6723c094587f1f8c547e37198c22bf4f64a9694
+f
+6big-market-code/big-market-code-infrastructure/pom.xml,0/b/0bf832ef268cc4ea2acd95d9e81108549539c775

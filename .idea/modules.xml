@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/big-market.iml" filepath="$PROJECT_DIR$/.idea/big-market.iml" />
+      <module fileurl="file://$PROJECT_DIR$/big-market-test-rpc/big-market-test-rpc.iml" filepath="$PROJECT_DIR$/big-market-test-rpc/big-market-test-rpc.iml" />
     </modules>
   </component>
 </project>
