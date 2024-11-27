@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chige.infrastructure.persistent.dao.IAwardDao">
+
+    <resultMap id="CaseMap" type="com.chige.infrastructure.persistent.po.Award">
+        <id column="id" property="id"/>
+        <result column="award_id" property="awardId" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <result column="award_key" property="awardKey" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="award_config" property="awardConfig" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="award_desc" property="awardDesc" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.chige.infrastructure.persistent.po.Award">
+        INSERT INTO award(award_id, award_key, award_config, award_desc) VALUES(#{awardId}, #{awardKey}, #{awardConfig}, #{awardDesc})
+    </insert>
+
+    <select id="selectList" resultMap="CaseMap">
+        select * from award limit 10
+    </select>
+
+</mapper>

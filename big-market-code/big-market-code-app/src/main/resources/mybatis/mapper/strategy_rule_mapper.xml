@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chige.infrastructure.persistent.dao.IStrategyRuleDao">
+
+    <resultMap id="CaseMap" type="com.chige.infrastructure.persistent.po.StrategyRule">
+        <id column="id" property="id"/>
+        <result column="strategy_id" property="strategyId" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <result column="award_id" property="awardId" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <result column="rule_type" property="ruleType" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <result column="rule_value" property="ruleValue" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="rule_model" property="ruleModel" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="rule_desc" property="ruleDesc" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.chige.infrastructure.persistent.po.StrategyRule">
+        INSERT INTO strategy_rule(strategy_id, award_id, rule_type, rule_value, rule_model, rule_desc)
+        VALUES(#{strategyId}, #{awardId}, #{ruleType}, #{ruleValue}, #{ruleModel}, #{ruleDesc})
+    </insert>
+
+</mapper>
