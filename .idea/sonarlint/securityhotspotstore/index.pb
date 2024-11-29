@@ -92,3 +92,5 @@ gbig-market-code/big-market-code-app/src/test/java/com/chige/test/domain/service
 nbig-market-code/big-market-code-infrastructure/src/main/java/com/chige/infrastructure/redis/IRedisService.java,0/9/09c6fa9bbe957b93d83ac1ae339eecb61db9cc79
 ù
 mbig-market-code/big-market-code-infrastructure/src/main/java/com/chige/infrastructure/redis/RedisService.java,5/a/5ac06479ec3e37fe412ef71ae6ac53e639ac0201
+]
+-big-market-code/big-market-code-types/pom.xml,7/3/73a9b239a55be137db3c6d6bb3f3e5d833e74019

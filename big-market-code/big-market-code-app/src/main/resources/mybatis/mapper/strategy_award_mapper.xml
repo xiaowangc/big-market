@@ -17,11 +17,21 @@
         <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
     </resultMap>
 
+    <sql id="strategy_award_entity_column">
+        strategy_id, award_id,award_count,award_count_surplus,award_rate
+    </sql>
+
     <insert id="insert" parameterType="com.chige.infrastructure.persistent.po.StrategyAward">
         INSERT INTO strategy_award(strategy_id, award_id, award_title, award_subtitle, award_count,
                                    award_count_surplus, award_rate, rule_models, sort)
         VALUES(#{strategyId}, #{awardId}, #{awardTitle}, #{awardSubtitle}, #{awardCount},
                #{awardCountSurplus},#{awardRate}, #{ruleModels}, #{sort})
     </insert>
+
+    <select id="queryStrategyAwardListByStrategyId" resultMap="CaseMap">
+        select <include refid="strategy_award_entity_column"/>
+        from strategy_award
+        where strategy_id = #{strategyId}
+    </select>
 
 </mapper>

@@ -18,6 +18,8 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class StrategyAwardEntity {
 
+    /** 抽奖策略ID */
+    private Long strategyId;
     /** 抽奖奖品ID - 内部流转使用 */
     private Integer awardId;
     /** 奖品库存总量 */
