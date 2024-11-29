@@ -13,8 +13,14 @@ import java.util.Date;
 public class Strategy {
     private Long id;
 
+    /**
+     * 策略id
+     */
     private String strategyId;
 
+    /**
+     * 策略描述
+     */
     private String strategyDesc;
 
     private Date createTime;

@@ -14,12 +14,24 @@ public class Award {
 
     private Long id;
 
+    /**
+     * 奖品id
+     */
     private Integer awardId;
 
+    /**
+     * 奖品key
+     */
     private String awardKey;
 
+    /**
+     * 奖品配置
+     */
     private String awardConfig;
 
+    /**
+     * 奖品描述
+     */
     private String awardDesc;
 
     private Date createTime;

@@ -10,7 +10,7 @@
         <result column="award_subtitle" property="awardSubtitle" javaType="java.lang.String" jdbcType="VARCHAR"/>
         <result column="award_count" property="awardCount" javaType="java.lang.Integer" jdbcType="INTEGER"/>
         <result column="award_count_surplus" property="awardCountSurplus" javaType="java.lang.Integer" jdbcType="INTEGER"/>
-        <result column="award_rate" property="awardRate" javaType="java.lang.Double" jdbcType="DECIMAL"/>
+        <result column="award_rate" property="awardRate" javaType="java.math.BigDecimal" jdbcType="DECIMAL"/>
         <result column="rule_models" property="ruleModels" javaType="java.lang.String" jdbcType="VARCHAR"/>
         <result column="sort" property="sort" javaType="java.lang.Integer" jdbcType="INTEGER"/>
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
