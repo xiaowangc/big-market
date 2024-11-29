@@ -27,7 +27,7 @@ public interface IRedisService {
     /** get操作
      * 获取指定key
      */
-    <T> T get(String key);
+    <T> T getValue(String key);
 
     /**
      * 获取队列
@@ -132,7 +132,7 @@ public interface IRedisService {
      * @param index 索引
      * @return 值
      */
-    String getFromList(String key, long index);
+    String getFromList(String key, int index);
 
     /**
      * 获取map集合
@@ -214,6 +214,6 @@ public interface IRedisService {
     /**
      * 布隆过滤器
      */
-    RBloomFilter<String> getBloomFilter(String key);
+    <T> RBloomFilter<T> getBloomFilter(String key);
 
 }
