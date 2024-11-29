@@ -16,12 +16,17 @@ public class Strategy {
     /**
      * 策略id
      */
-    private String strategyId;
+    private Long strategyId;
 
     /**
      * 策略描述
      */
     private String strategyDesc;
+
+    /**
+     * 规则模型
+     */
+    private String ruleModels;
 
     private Date createTime;
 

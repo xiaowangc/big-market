@@ -1,8 +1,13 @@
 package com.chige.infrastructure.persistent.repository;
 
+import com.alibaba.fastjson.JSON;
 import com.chige.domain.strategy.model.entity.StrategyAwardEntity;
+import com.chige.domain.strategy.model.entity.StrategyEntity;
+import com.chige.domain.strategy.model.entity.StrategyRuleEntity;
 import com.chige.domain.strategy.repository.IStrategyRepository;
 import com.chige.infrastructure.persistent.dao.IStrategyAwardDao;
+import com.chige.infrastructure.persistent.dao.IStrategyDao;
+import com.chige.infrastructure.persistent.po.Strategy;
 import com.chige.infrastructure.persistent.po.StrategyAward;
 import com.chige.infrastructure.redis.IRedisService;
 import com.chige.types.common.Constants;
@@ -15,6 +20,7 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * @Author wangyc
@@ -29,6 +35,8 @@ public class StrategyRepository implements IStrategyRepository {
     private IStrategyAwardDao strategyAwardDao;
     @Resource
     private IRedisService redisService;
+    @Resource
+    private IStrategyDao strategyDao;
 
     @Override
     public List<StrategyAwardEntity> queryStrategyAwardList(Long strategyId) {
@@ -73,7 +81,40 @@ public class StrategyRepository implements IStrategyRepository {
     }
 
     @Override
+    public int getRateRange(String key) {
+        return 0;
+    }
+
+    @Override
     public Integer getStrategyAwardAssemble(Long strategyId, int rateKey) {
         return redisService.getFromMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + strategyId, rateKey);
+    }
+
+    @Override
+    public StrategyEntity queryStrategyEntityByStrategyId(Long strategyId) {
+        String cacheKey = Constants.RedisKey.STRATEGY_KEY + strategyId;
+        StrategyEntity strategyEntity = redisService.getValue(cacheKey);
+        if (Objects.nonNull(strategyEntity)) {
+            return strategyEntity;
+        }
+
+        Strategy strategy = strategyDao.queryStrategyByStrategyId(strategyId);
+        if (Objects.isNull(strategy)) {
+            return null;
+        }
+
+        strategyEntity = StrategyEntity.builder()
+                .strategyId(strategy.getStrategyId())
+                .strategyDesc(strategy.getStrategyDesc())
+                .ruleModels(strategy.getStrategyDesc())
+                .build();
+        redisService.setValue(cacheKey, strategyEntity);
+        log.info("设置缓存key:{}, value:{}", cacheKey, JSON.toJSONString(strategyEntity));
+        return strategyEntity;
+    }
+
+    @Override
+    public StrategyRuleEntity queryStrategyRule(Long strategyId, String ruleModel) {
+        return null;
     }
 }

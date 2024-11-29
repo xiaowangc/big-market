@@ -4,8 +4,9 @@
 
     <resultMap id="CaseMap" type="com.chige.infrastructure.persistent.po.Strategy">
         <id column="id" property="id"/>
-        <result column="strategy_id" property="strategyId" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+        <result column="strategy_id" property="strategyId" javaType="java.lang.Long" jdbcType="BIGINT"/>
         <result column="strategy_desc" property="strategyDesc" javaType="java.lang.String" jdbcType="VARCHAR"/>
+        <result column="rule_models" property="ruleModels" javaType="java.lang.String" jdbcType="VARCHAR"/>
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
         <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
     </resultMap>
@@ -13,5 +14,10 @@
     <insert id="insert" parameterType="com.chige.infrastructure.persistent.po.Strategy">
         INSERT INTO strategy(strategy_id, strategy_desc) VALUES(#{strategyId}, #{strategyDesc})
     </insert>
+
+    <select id="queryStrategyByStrategyId" resultMap="CaseMap">
+        select * from strategy
+        where strategy_id = #{strategyId}
+    </select>
 
 </mapper>

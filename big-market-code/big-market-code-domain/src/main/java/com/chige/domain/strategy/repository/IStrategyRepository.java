@@ -1,6 +1,8 @@
 package com.chige.domain.strategy.repository;
 
 import com.chige.domain.strategy.model.entity.StrategyAwardEntity;
+import com.chige.domain.strategy.model.entity.StrategyEntity;
+import com.chige.domain.strategy.model.entity.StrategyRuleEntity;
 
 import java.util.List;
 import java.util.Map;
@@ -33,6 +35,8 @@ public interface IStrategyRepository {
      */
     int getRateRange(Long strategyId);
 
+    int getRateRange(String key);
+
     /**
      * 根据策略ID查询策略奖品概率区间
      * @param strategyId 策略id
@@ -40,4 +44,20 @@ public interface IStrategyRepository {
      * @return
      */
     Integer getStrategyAwardAssemble(Long strategyId, int rateKey);
+
+    /**
+     * 根据策略id查询策略信息实体
+     * @param strategyId 策略id
+     * @return 策略实体
+     */
+    StrategyEntity queryStrategyEntityByStrategyId(Long strategyId);
+
+    /**
+     * 根据策略Id,规则模型查询策略规则实体
+     * @param strategyId 策略id
+     * @param ruleModel 规则模型
+     * @return 策略规则实体
+     */
+    StrategyRuleEntity queryStrategyRule(Long strategyId, String ruleModel);
+
 }
