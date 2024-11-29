@@ -1,4 +1,4 @@
-package com.chige.domain.service.armory;
+package com.chige.domain.strategy.service.armory;
 
 import com.chige.domain.strategy.model.entity.StrategyAwardEntity;
 import com.chige.domain.strategy.repository.IStrategyRepository;

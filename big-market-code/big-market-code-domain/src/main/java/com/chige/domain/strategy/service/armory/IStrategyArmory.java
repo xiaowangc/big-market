@@ -1,4 +1,4 @@
-package com.chige.domain.service.armory;
+package com.chige.domain.strategy.service.armory;
 
 /**
  * @Author wangyc

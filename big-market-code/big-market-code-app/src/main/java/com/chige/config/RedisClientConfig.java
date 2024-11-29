@@ -35,10 +35,10 @@ public class RedisClientConfig {
      * @return
      */
     @Bean("redissonClient")
-    public RedissonClient redisClient(ConfigurableApplicationContext applicationContext, RedisClientProperties properties) {
+    public RedissonClient redissonClient(ConfigurableApplicationContext applicationContext, RedisClientProperties properties) {
         Config config = new Config();
         //设置编码器，默认为JSON https://github.com/redisson/redisson/wiki/4.-%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96
-        config.setCodec(new RedisCodec());
+//        config.setCodec(new RedisCodec());
 
         config.useSingleServer()
                 .setAddress("redis://" + properties.getHost() + ":" + properties.getPort())
