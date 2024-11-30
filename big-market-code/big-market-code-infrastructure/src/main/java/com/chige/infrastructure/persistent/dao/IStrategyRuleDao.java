@@ -13,4 +13,6 @@ public interface IStrategyRuleDao {
 
     Integer insert(StrategyRule strategyRule);
 
+    StrategyRule queryStrategyRule(StrategyRule strategyRule);
+
 }

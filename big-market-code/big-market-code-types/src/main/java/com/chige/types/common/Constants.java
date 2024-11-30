@@ -4,6 +4,9 @@ public class Constants {
 
     public final static String SPLIT = ",";
 
+    public final static String COLON = ":";
+
+    public final static String SPACE = " ";
 
 
     public static class RedisKey {

@@ -1,6 +1,7 @@
 package com.chige.domain.strategy.model.entity;
 
 import com.chige.types.common.Constants;
+import com.chige.types.enums.RuleModelEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -38,7 +39,7 @@ public class StrategyEntity {
     public String getRuleWeight() {
         String[] ruleModelsArr = this.ruleModels();
         for (String ruleModel : ruleModelsArr) {
-            if ("rule_weight".equals(ruleModel)) {
+            if (RuleModelEnum.isRuleWeight(ruleModel)) {
                 return ruleModel;
             }
         }

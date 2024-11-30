@@ -102,3 +102,13 @@ ibig-market-code/big-market-code-domain/src/main/java/com/chige/domain/strategy/
 rbig-market-code/big-market-code-domain/src/main/java/com/chige/domain/strategy/service/armory/IStrategyArmory.java,2/4/2474d10d07980f084e6b5a67bafe523ec847ab83
 ¡
 qbig-market-code/big-market-code-domain/src/main/java/com/chige/domain/strategy/service/armory/StrategyArmory.java,c/a/caeddb28d312f212ee0665670f4918e4cf7657bc
+¤
+tbig-market-code/big-market-code-domain/src/main/java/com/chige/domain/strategy/service/armory/IStrategyDispatch.java,4/4/448ee7c26132bf088c4339ab73f872431256aaa3
+©
+ybig-market-code/big-market-code-domain/src/main/java/com/chige/domain/strategy/service/armory/StrategyArmoryDispatch.java,4/c/4c28aef2b3028b5580cced72427a98d7f1ed1bb9
+Ÿ
+obig-market-code/big-market-code-app/src/test/java/com/chige/test/domain/service/StrategyArmoryDispatchTest.java,9/c/9c549069b88bff534a4dbf95059c3d6284ef3c76
+§
+wbig-market-code/big-market-code-app/src/test/java/com/chige/test/domain/service/StrategyArmoryDispatchDispatchTest.java,8/0/80770ddeebcd9eb5e7b1dde23d3d5ed85189066d
+Œ
+\big-market-code/big-market-code-types/src/main/java/com/chige/types/enums/RuleModelEnum.java,d/6/d683146f404a7e9b3bfbeecb3e2965ae8ec62225

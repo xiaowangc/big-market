@@ -2,6 +2,11 @@ package com.chige.config;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.databind.MapperFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
 import io.netty.buffer.ByteBufInputStream;
@@ -11,6 +16,7 @@ import org.redisson.api.RedissonClient;
 import org.redisson.client.codec.BaseCodec;
 import org.redisson.client.protocol.Decoder;
 import org.redisson.client.protocol.Encoder;
+import org.redisson.codec.JsonJacksonCodec;
 import org.redisson.config.Config;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -38,7 +44,9 @@ public class RedisClientConfig {
     public RedissonClient redissonClient(ConfigurableApplicationContext applicationContext, RedisClientProperties properties) {
         Config config = new Config();
         //设置编码器，默认为JSON https://github.com/redisson/redisson/wiki/4.-%E6%95%B0%E6%8D%AE%E5%BA%8F%E5%88%97%E5%8C%96
-//        config.setCodec(new RedisCodec());
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.deactivateDefaultTyping();
+        config.setCodec(new JsonJacksonCodec(objectMapper));
 
         config.useSingleServer()
                 .setAddress("redis://" + properties.getHost() + ":" + properties.getPort())
