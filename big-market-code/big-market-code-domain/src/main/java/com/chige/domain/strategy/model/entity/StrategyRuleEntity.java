@@ -25,7 +25,7 @@ public class StrategyRuleEntity {
     private Long strategyId;
 
     /** 抽奖奖品ID */
-    private Long awardId;
+    private Integer awardId;
 
     /** 规则类型 1-策略规则 2-奖品规则 */
     private Integer ruleType;
