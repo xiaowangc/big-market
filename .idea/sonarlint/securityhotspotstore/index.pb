@@ -146,3 +146,7 @@ rbig-market-code/big-market-code-domain/src/main/java/com/chige/domain/strategy/
 sbig-market-code/big-market-code-domain/src/main/java/com/chige/domain/strategy/model/entity/RaffleFactorEntity.java,d/0/d0553b83de1e9c5ee1ba97a88c058b7cab1347ed
 —
 gbig-market-code/big-market-code-app/src/test/java/com/chige/test/domain/service/RaffleStrategyTest.java,f/1/f117044c25373e6aebb9471db5214dee27146515
+©
+ybig-market-code/big-market-code-domain/src/main/java/com/chige/domain/strategy/service/rule/impl/RuleLockLogicFilter.java,3/7/375e835ca7a7d50a0a240e9aaf23b523e41f21dd
+©
+ybig-market-code/big-market-code-domain/src/main/java/com/chige/domain/strategy/model/valobj/StrategyAwardRuleModelVO.java,b/f/bf94f4521afc7b41c681fb63db8131dabd4c297e

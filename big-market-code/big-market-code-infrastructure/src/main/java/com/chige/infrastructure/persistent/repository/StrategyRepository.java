@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.chige.domain.strategy.model.entity.StrategyAwardEntity;
 import com.chige.domain.strategy.model.entity.StrategyEntity;
 import com.chige.domain.strategy.model.entity.StrategyRuleEntity;
+import com.chige.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import com.chige.domain.strategy.repository.IStrategyRepository;
 import com.chige.infrastructure.persistent.dao.IStrategyAwardDao;
 import com.chige.infrastructure.persistent.dao.IStrategyDao;
@@ -154,5 +155,15 @@ public class StrategyRepository implements IStrategyRepository {
         strategyRule.setAwardId(awardId);
 
         return strategyRuleDao.queryStrategyRuleValue(strategyRule);
+    }
+
+    @Override
+    public StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId) {
+        StrategyAward strategyAward = new StrategyAward();
+        strategyAward.setStrategyId(strategyId);
+        strategyAward.setAwardId(awardId);
+
+        String ruleModels = strategyAwardDao.queryStrategyAwardRuleModels(strategyAward);
+        return  StrategyAwardRuleModelVO.builder().ruleModels(ruleModels).build();
     }
 }

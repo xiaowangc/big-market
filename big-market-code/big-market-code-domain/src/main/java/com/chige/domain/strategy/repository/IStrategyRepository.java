@@ -3,6 +3,7 @@ package com.chige.domain.strategy.repository;
 import com.chige.domain.strategy.model.entity.StrategyAwardEntity;
 import com.chige.domain.strategy.model.entity.StrategyEntity;
 import com.chige.domain.strategy.model.entity.StrategyRuleEntity;
+import com.chige.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 
 import java.util.List;
 import java.util.Map;
@@ -61,5 +62,13 @@ public interface IStrategyRepository {
     StrategyRuleEntity queryStrategyRule(Long strategyId, String ruleModel);
 
     String queryStrategyRuleValue(Long strategyId, Integer awardId, String ruleModel);
+
+    /**
+     * 查询策略奖品规则模型
+     * @param strategyId 策略id
+     * @param awardId 奖品id
+     * @return 策略奖品规则模型
+     */
+    StrategyAwardRuleModelVO queryStrategyAwardRuleModelVO(Long strategyId, Integer awardId);
 
 }
