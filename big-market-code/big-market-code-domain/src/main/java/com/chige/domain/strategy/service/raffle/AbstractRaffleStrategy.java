@@ -53,7 +53,7 @@ public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
         StrategyEntity strategyEntity = strategyRepository.queryStrategyEntityByStrategyId(strategyId);
 
         // 3. 抽奖前 - 校验过滤规则
-        RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> ruleActionEntity = doCheckRaffleBeforeLogic(RaffleFactorEntity.builder().userId(userId).strategyId(strategyId).build(), strategyEntity.ruleModels());
+        RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> ruleActionEntity = this.doCheckRaffleBeforeLogic(RaffleFactorEntity.builder().userId(userId).strategyId(strategyId).build(), strategyEntity.ruleModels());
 
         if (Objects.isNull(ruleActionEntity)) {
             throw new AppException(ResponseCode.ILLEGAL_PARAMETER.getCode(), ResponseCode.ILLEGAL_PARAMETER.getInfo());
