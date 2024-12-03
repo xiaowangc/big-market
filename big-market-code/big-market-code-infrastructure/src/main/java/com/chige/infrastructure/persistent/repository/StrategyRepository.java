@@ -119,7 +119,7 @@ public class StrategyRepository implements IStrategyRepository {
                 .ruleModels(strategy.getRuleModels())
                 .build();
         redisService.setValue(cacheKey, strategyEntity);
-        log.info("设置缓存key:{}, value:{}", cacheKey, JSON.toJSONString(strategyEntity));
+        log.info("设置缓存key:{}, value:{}", cacheKey, strategyEntity);
         return strategyEntity;
     }
 

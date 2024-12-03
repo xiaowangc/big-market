@@ -2,7 +2,6 @@ package com.chige.domain.strategy.model.valobj;
 
 import com.chige.domain.strategy.service.rule.factory.DefaultLogicFactory;
 import com.chige.types.common.Constants;
-import jdk.vm.ci.meta.Constant;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

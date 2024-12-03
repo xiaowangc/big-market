@@ -59,6 +59,10 @@ public class DefaultLogicFactory {
         public static boolean isAfter(String code) {
             return "after".equals(LogicModel.valueOf(code.toUpperCase()).getType());
         }
+
+        public static boolean isRuleWeight(String code) {
+            return "rule_weight".equals(code);
+        }
     }
 
 }

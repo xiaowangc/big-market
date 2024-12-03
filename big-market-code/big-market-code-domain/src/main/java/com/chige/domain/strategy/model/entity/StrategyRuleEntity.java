@@ -1,7 +1,7 @@
 package com.chige.domain.strategy.model.entity;
 
+import com.chige.domain.strategy.service.rule.factory.DefaultLogicFactory;
 import com.chige.types.common.Constants;
-import com.chige.types.enums.RuleModelEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -44,7 +44,7 @@ public class StrategyRuleEntity {
      * 例如：4000:102,103,104,105 5000:102,103,104,105,106,107 6000:102,103,104,105,106,107,108,109
      */
     public Map<String, List<Integer>> getRuleWeightValues() {
-        if (!RuleModelEnum.isRuleWeight(ruleMode)) return Collections.emptyMap();
+        if (!DefaultLogicFactory.LogicModel.isRuleWeight(ruleMode)) return Collections.emptyMap();
 
         String[] ruleValueGroups = ruleValue.split(Constants.SPACE);
         Map<String, List<Integer>> resultMap = new HashMap<>();

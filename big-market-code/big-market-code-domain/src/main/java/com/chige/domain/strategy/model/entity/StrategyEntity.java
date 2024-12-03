@@ -1,11 +1,8 @@
 package com.chige.domain.strategy.model.entity;
 
+import com.chige.domain.strategy.service.rule.factory.DefaultLogicFactory;
 import com.chige.types.common.Constants;
-import com.chige.types.enums.RuleModelEnum;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -13,6 +10,7 @@ import org.apache.commons.lang3.StringUtils;
  * @Description 策略实体
  * @Date 2024/11/28 18:23
  */
+@ToString
 @Data
 @Builder
 @NoArgsConstructor
@@ -38,8 +36,11 @@ public class StrategyEntity {
      */
     public String getRuleWeight() {
         String[] ruleModelsArr = this.ruleModels();
+        if (ruleModelsArr == null) {
+            return null;
+        }
         for (String ruleModel : ruleModelsArr) {
-            if (RuleModelEnum.isRuleWeight(ruleModel)) {
+            if (DefaultLogicFactory.LogicModel.isRuleWeight(ruleModel)) {
                 return ruleModel;
             }
         }
